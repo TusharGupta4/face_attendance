@@ -11,8 +11,11 @@ def get_face_app():
     global face_app
 
     if face_app is None:
-        face_app = FaceAnalysis(name="buffalo_s")
-        face_app.prepare(ctx_id=-1)  # CPU mode for Railway
+        face_app = FaceAnalysis(
+            name="buffalo_s",
+            allowed_modules=["detection", "recognition"],  # skip landmark/genderage — not needed, saves RAM
+        )
+        face_app.prepare(ctx_id=-1, det_size=(320, 320))  # smaller det_size = less RAM + faster
 
     return face_app
 
