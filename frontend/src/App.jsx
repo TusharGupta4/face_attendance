@@ -1,12 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import ProtectedRoute from "./components/ProtectedRoute";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
-import RegisterFace from "./pages/RegisterFace";
-import Attendance from "./pages/Attendance";
-import History from "./pages/History";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Dashboard from "./pages/dashboard";
+import RegisterFace from "./pages/registerface";
+import Attendance from "./pages/attendance";
+import History from "./pages/history";
 
 function App() {
   return (
@@ -51,7 +51,6 @@ function App() {
           </ProtectedRoute>
         }
       />
-
     </Routes>
   );
 }
