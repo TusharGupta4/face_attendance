@@ -1,5 +1,5 @@
 import Webcam from "react-webcam";
-import FaceGuide from "./FaceGuide";
+import FaceGuide from "./faceguide";
 
 function Camera({
   webcamRef,
