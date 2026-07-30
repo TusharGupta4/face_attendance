@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import Camera from "../components/Camera";
+import Camera from "../components/camera";
 import { checkIn, checkOut } from "../services/attendance";
 import { base64ToFile } from "../utils/base64ToFile";
 

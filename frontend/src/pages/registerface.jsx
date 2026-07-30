@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import Camera from "../components/Camera";
-import FaceValidator from "../components/FaceValidator";
+import Camera from "../components/camera";
+import FaceValidator from "../components/faceValidator";
 function RegisterFace() {
   const webcamRef = useRef(null);
 
