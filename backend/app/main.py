@@ -32,6 +32,14 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(face_router)
 app.include_router(attendance_router)
+
+
+@app.on_event("startup")
+def load_face_model():
+    from app.services.face_service import get_face_app
+    get_face_app()  # forces model load once, at boot — not on first request
+
+
 @app.get("/")
 def root():
     return {
